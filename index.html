@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitLab | Kişisel Sağlık Asistanı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#">FitLab</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-card card">
+          <p class="eyebrow" data-i18n="heroTag">Kişisel Sağlık & Performans</p>
+          <h1 data-i18n="heroTitle">Sağlığını Veriye Dayalı Olarak Geliştir</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Kişisel bilgileriniz ve yaşam tarzınıza göre beslenme ve antrenman planı oluşturun
+          </p>
+          <a class="btn-primary" href="#form-section" data-i18n="heroCta">Analizimi Başlat</a>
+        </div>
+      </section>
+
+      <section class="features container">
+        <div class="section-header">
+          <h2 data-i18n="featureTitle">FitLab Neler Sunar?</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card">
+            <h3 data-i18n="f1Title">Kişisel Analiz</h3>
+            <p data-i18n="f1Desc">Yaş, kilo, boy ve yaşam tarzınıza göre temel metabolik analiz.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="f2Title">Kan Değeri Bazlı Öneri</h3>
+            <p data-i18n="f2Desc">Demir, B12, D vitamini ve kolesterol verilerine göre içgörü.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="f3Title">Akıllı Antrenman</h3>
+            <p data-i18n="f3Desc">Günlük kapasitenize uygun kısa ve etkili egzersiz planı.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="f4Title">Hedef Takibi</h3>
+            <p data-i18n="f4Desc">Hedef kilonuza doğru ilerleyişi ölçen net öneriler.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="form-section" class="container form-section">
+        <div class="section-header">
+          <h2 data-i18n="formTitle">Bilgilerini Gir</h2>
+        </div>
+        <form id="fitlab-form" class="card form-card">
+          <div class="form-grid">
+            <label>
+              <span data-i18n="age">Yaş</span>
+              <input type="number" name="age" min="10" max="100" required />
+            </label>
+            <label>
+              <span data-i18n="weight">Kilo (kg)</span>
+              <input type="number" name="weight" min="30" max="300" step="0.1" required />
+            </label>
+            <label>
+              <span data-i18n="height">Boy (cm)</span>
+              <input type="number" name="height" min="120" max="230" required />
+            </label>
+            <label>
+              <span data-i18n="gender">Cinsiyet</span>
+              <select name="gender" required>
+                <option value="" selected disabled>Seçiniz</option>
+                <option value="male">Erkek</option>
+                <option value="female">Kadın</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="targetWeight">Hedef Kilo (kg)</span>
+              <input type="number" name="targetWeight" min="30" max="300" step="0.1" required />
+            </label>
+            <label>
+              <span data-i18n="activity">Günlük Aktivite Seviyesi</span>
+              <select name="activityLevel" required>
+                <option value="" selected disabled>Seçiniz</option>
+                <option value="1.2">Sedanter (az hareket)</option>
+                <option value="1.375">Hafif aktif (haftada 1-3 gün)</option>
+                <option value="1.55">Orta aktif (haftada 3-5 gün)</option>
+                <option value="1.725">Çok aktif (haftada 6-7 gün)</option>
+                <option value="1.9">Profesyonel düzey aktif</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="smokingAlcohol">Sigara / Alkol</span>
+              <select name="smokingAlcohol" required>
+                <option value="" selected disabled>Seçiniz</option>
+                <option value="none">Kullanmıyorum</option>
+                <option value="occasional">Ara sıra</option>
+                <option value="regular">Düzenli</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="testDate">Test Tarihi</span>
+              <input type="date" name="testDate" />
+            </label>
+          </div>
+
+          <fieldset class="blood-values">
+            <legend data-i18n="bloodOptional">Opsiyonel Kan Değerleri</legend>
+            <div class="form-grid">
+              <label>
+                <span data-i18n="iron">Demir (µg/dL)</span>
+                <input type="number" name="iron" step="0.1" min="0" />
+              </label>
+              <label>
+                <span data-i18n="b12">B12 (pg/mL)</span>
+                <input type="number" name="b12" step="0.1" min="0" />
+              </label>
+              <label>
+                <span data-i18n="vitaminD">D Vitamini (ng/mL)</span>
+                <input type="number" name="vitaminD" step="0.1" min="0" />
+              </label>
+              <label>
+                <span data-i18n="cholesterol">Kolesterol (mg/dL)</span>
+                <input type="number" name="cholesterol" step="0.1" min="0" />
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="btn-primary" type="submit" data-i18n="analyze">Analiz Et</button>
+        </form>
+      </section>
+
+      <section class="container result-section">
+        <div class="section-header">
+          <h2 data-i18n="resultTitle">Sonuçlar</h2>
+        </div>
+        <div id="result-card" class="card result-card">
+          <p class="result-placeholder" data-i18n="resultPlaceholder">
+            Sonuçları görmek için formu doldurup analiz başlatın.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> FitLab. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
